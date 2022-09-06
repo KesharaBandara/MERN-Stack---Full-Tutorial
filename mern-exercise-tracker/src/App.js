@@ -17,10 +17,15 @@ function App() {
       <Navbar />
       <br/>
       <Routes>
-      <Route path="/" exact component={ExercisesList} />
+      {/* <Route path="/" exact component={ExercisesList} />
       <Route path="/edit/:id" component={EditExercise} />
       <Route path="/create" component={CreateExercise} />
-      <Route path="/user" component={CreateUser} />
+      <Route path="/user" component={CreateUser} /> */}
+      <Route exact path="/" element={<ExercisesList/>}/>
+      <Route path="/edit/:id" element={<EditExercise/>}/>
+      <Route path="/create" element={<CreateExercise/>}/>
+      <Route path="/user" element={<CreateUser/>}/>
+
       </Routes>
       </div>
     </Router>

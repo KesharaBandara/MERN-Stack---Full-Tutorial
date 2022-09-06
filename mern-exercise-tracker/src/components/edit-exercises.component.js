@@ -3,7 +3,16 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class EditExercise extends Component {
+
+import {useParams} from 'react-router-dom';
+
+export function withRouter(Children){
+  return(props) => {
+    const match = { params: useParams()};
+    return <Children{...props} match={match}/>;
+  };
+}
+class EditExercise extends Component {
   constructor(props) {
     super(props);
 
@@ -150,3 +159,5 @@ export default class EditExercise extends Component {
     )
   }
 }
+
+export default withRouter(EditExercise);
