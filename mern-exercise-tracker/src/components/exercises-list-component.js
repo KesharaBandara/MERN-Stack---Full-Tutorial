@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
+
 const Exercise = props => (
   <tr>
     <td>{props.exercise.username}</td>
@@ -13,6 +15,7 @@ const Exercise = props => (
     </td>
   </tr>
 )
+
 
 export default class ExercisesList extends Component {
   constructor(props) {
@@ -48,14 +51,15 @@ export default class ExercisesList extends Component {
     })
   }
 
+  
+  
   render() {
     return (
       <div>
-        <h3>Logged Exercises</h3>
+                 <h3>Logged Exercises</h3>
         <table className="table">
           <thead className="thead-light">
-            <tr>
-              <th>Username</th>
+            <tr><th>Username</th>
               <th>Description</th>
               <th>Duration</th>
               <th>Date</th>

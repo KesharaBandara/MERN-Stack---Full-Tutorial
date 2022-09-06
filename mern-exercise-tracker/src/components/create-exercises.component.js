@@ -19,7 +19,7 @@ export default class CreateExercise extends Component {
       duration: 0,
       date: new Date(),
       users: []
-    }
+    };
   }
 
   componentDidMount() {
